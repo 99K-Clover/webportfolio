@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCJ Creative | Digital Portfolio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f6f8;color:#172033;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{max-width:1200px;margin:auto}
+section{padding:90px 7%}
+nav{position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #e3e5e8}
+.logo{font-size:25px;font-weight:800;letter-spacing:2px} .logo span{color:#395fa8}
+.nav-links{display:flex;gap:28px;list-style:none} .nav-links a{font-size:14px;font-weight:600} .nav-links a:hover{color:#395fa8}
+.hero{min-height:88vh;display:flex;align-items:center;background:linear-gradient(135deg,#eef3ff,#fff)}
+.hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:60px;align-items:center}
+.small-title,.section-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:#395fa8;margin-bottom:12px}
+.hero h1{font-size:clamp(48px,8vw,90px);line-height:.98;margin-bottom:25px}
+.hero h1 span{color:#395fa8} .hero p{max-width:680px;font-size:19px;color:#5d6675;margin-bottom:30px}
+.btn{display:inline-block;padding:14px 25px;background:#172033;color:#fff;border-radius:8px;font-size:14px;font-weight:700} .btn:hover{background:#395fa8}
+.hero-logo{display:flex;justify-content:center;align-items:center} .hero-logo img{width:min(330px,75vw);max-height:400px;object-fit:contain}
+.about{background:#fff} .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.section-title{font-size:42px;line-height:1.1;margin-bottom:15px} .about-text p,.section-description{color:#697384;max-width:700px;margin-bottom:18px}
+.about-card{padding:35px;background:#f5f6f8;border-radius:18px;border:1px solid #e4e7ec} .about-card h3{margin-bottom:15px} .about-card ul{list-style:none} .about-card li{padding:9px 0;border-bottom:1px solid #ddd}
+.skills{margin-top:35px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill{padding:22px;background:#fff;border:1px solid #e3e6eb;border-radius:14px} .skill h3{margin-bottom:8px} .skill p{color:#697384;font-size:14px}
+.portfolio{background:#f5f6f8} .portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:35px;margin-top:40px}
+.project{background:#fff;border-radius:18px;overflow:hidden;border:1px solid #e1e4e8;box-shadow:0 8px 30px rgba(0,0,0,.05);transition:.25s}
+.project:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(0,0,0,.10)}
+.project-image-wrap{height:360px;background:#fff;display:flex;align-items:center;justify-content:center;padding:20px}
+.project-image-wrap img{width:100%;height:100%;object-fit:contain}
+.project-info{padding:25px} .tag{display:inline-block;padding:6px 11px;background:#edf2fb;color:#395fa8;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.project-info h3{font-size:25px;margin-bottom:10px} .project-info p{color:#697384;font-size:15px}
+.services{background:#fff} .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.service{padding:30px;border:1px solid #e2e5e9;border-radius:16px;background:#fff} .service-number{font-size:13px;color:#395fa8;font-weight:800;margin-bottom:20px} .service h3{margin-bottom:10px} .service p{color:#697384;font-size:14px}
+.contact{background:#172033;color:#fff} .contact .section-label{color:#9db7ed} .contact-description{max-width:650px;color:#c7ceda;margin-bottom:30px}
+.contact-info{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;max-width:700px} .contact-box{padding:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px} .contact-box small{display:block;color:#9ea8b9;margin-bottom:5px}
+footer{padding:25px 7%;text-align:center;background:#101722;color:#9da7b6;font-size:13px}
+@media(max-width:850px){.hero-grid,.about-grid{grid-template-columns:1fr}.portfolio-grid{grid-template-columns:1fr}.skills,.services-grid{grid-template-columns:repeat(2,1fr)}.hero-logo{order:-1}}
+@media(max-width:600px){nav{flex-direction:column;gap:12px}.nav-links{flex-wrap:wrap;justify-content:center;gap:15px}section{padding:65px 6%}.hero{min-height:75vh}.skills,.services-grid,.contact-info{grid-template-columns:1fr}.section-title{font-size:34px}.project-image-wrap{height:260px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo"><span>CCJ</span> CREATIVE</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li><li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="small-title">Digital Artist • Graphic Designer • Photo Editor</div>
+      <h1>Charles Jason <span>Marcelo</span></h1>
+      <p>Creating meaningful visual experiences through graphic design, digital arts, photo editing, branding, and social media content.</p>
+      <a href="#portfolio" class="btn">View My Work</a>
+    </div>
+    <div class="hero-logo"><img src="logo_ ccj.png" alt="CCJ Creative Logo"></div>
+  </div>
+</section>
+
+<section class="about" id="about"><div class="container">
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Ideas that inspire.<br>Designs that impact.</h2>
+      <p>I am a digital artist and graphic designer focused on creating clean, engaging, and purposeful visual designs.</p>
+      <p>My work includes promotional materials, social media graphics, brochures, branding, photo editing, digital art, and web design.</p>
+    </div>
+    <div class="about-card"><h3>Creative Profile</h3><ul>
+      <li>Graphic Design</li><li>Digital Arts</li><li>Photo Editing</li><li>Social Media Design</li><li>Marketing Materials</li><li>Web Design</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="container">
+  <div class="section-label">Skills</div><h2 class="section-title">Tools &amp; Creative Skills</h2>
+  <p class="section-description">A combination of creative design and digital skills used to develop visual content.</p>
+  <div class="skills">
+    <div class="skill"><h3>Canva</h3><p>Social media graphics, presentations, promotional materials and layouts.</p></div>
+    <div class="skill"><h3>Adobe Photoshop</h3><p>Photo editing, retouching, manipulation and composition.</p></div>
+    <div class="skill"><h3>Adobe Illustrator</h3><p>Vector graphics, logos, illustrations and branding materials.</p></div>
+    <div class="skill"><h3>Photography</h3><p>Product, portrait and creative photography.</p></div>
+    <div class="skill"><h3>Web Design</h3><p>HTML, CSS and responsive portfolio layouts.</p></div>
+    <div class="skill"><h3>Digital Arts</h3><p>Illustration, character design, concept art and visual development.</p></div>
+  </div>
+</div></section>
+
+<section class="portfolio" id="portfolio"><div class="container">
+  <div class="section-label">Selected Work</div><h2 class="section-title">My Portfolio</h2>
+  <p class="section-description">A selection of branding, promotional, social media, brochure, signage, identity, and print design projects.</p>
+  <div class="portfolio-grid">
+    <article class="project">
+      <div class="project-image-wrap"><img src="VIVO(PH)1.png" alt="vivo V70 FE Promotional Campaign"></div>
+      <div class="project-info">
+        <span class="tag">Social Media Posting</span>
+        <h3>vivo V70 FE Promotional Campaign</h3>
+        <p>Promotional campaign artwork combining lifestyle photography, product presentation, campaign messaging, typography, and brand elements.</p>
+      </div>
+    </article>
+    <article class="project">
+      <div class="project-image-wrap"><img src="Brochure Design front.png" alt="CCJ Creative Brochure Design"></div>
+      <div class="project-info">
+        <span class="tag">Brochure / Company Profile</span>
+        <h3>CCJ Creative Service Brochure</h3>
+        <p>Multi-section company brochure presenting CCJ Creative's services, contact details, social media information, and visual branding.</p>
+      </div>
+    </article>
+<article class="project">
+        <div class="project-image-wrap"><img src="logo_ ccj.png" alt="CCJ Creative Logo"></div>
+        <div class="project-info">
+          <span class="tag">Brand Identity</span>
+          <h3>CCJ Creative Logo</h3>
+          <p>Logo and visual identity development.</p>
+        </div>
+      </article>
+<article class="project">
+        <div class="project-image-wrap"><img src="ID Card Design.png" alt="Belle Oeuvre ID Card"></div>
+        <div class="project-info">
+          <span class="tag">Print Design</span>
+          <h3>Belle Oeuvre ID Card</h3>
+          <p>Professional ID card layout combining branding, employee information, and emergency-contact details.</p>
+        </div>
+      </article>
+<article class="project">
+        <div class="project-image-wrap"><img src="Black Rhino - LogoSignage.png.png" alt="Black Rhino"></div>
+        <div class="project-info">
+          <span class="tag">Logo Design</span>
+          <h3>Black Rhino</h3>
+          <p>Automotive branding and signage artwork.</p>
+        </div>
+      </article>
+<article class="project">
+        <div class="project-image-wrap"><img src="ENKEI- LogoSignage.png" alt="ENKEI"></div>
+        <div class="project-info">
+          <span class="tag">Logo Design</span>
+          <h3>ENKEI</h3>
+          <p>Clean automotive logo artwork prepared for signage and visual applications.</p>
+        </div>
+      </article>
+<article class="project">
+        <div class="project-image-wrap"><img src="Koenigsegg-logo.png" alt="Koenigsegg"></div>
+        <div class="project-info">
+          <span class="tag">Logo Design</span>
+          <h3>Koenigsegg</h3>
+          <p>Automotive emblem and wordmark artwork.</p>
+        </div>
+      </article>
+<article class="project">
+        <div class="project-image-wrap"><img src="METHOD - Logo - Signage - STICKER.png" alt="Method Race Wheels"></div>
+        <div class="project-info">
+          <span class="tag">Logo / Signage</span>
+          <h3>Method Race Wheels</h3>
+          <p>Bold race-wheel branding composition for signage and sticker applications.</p>
+        </div>
+      </article>
+<article class="project">
+        <div class="project-image-wrap"><img src="NEON LIGHT (LOGO - SIGNAGE).png" alt="Neon Light"></div>
+        <div class="project-info">
+          <span class="tag">Logo / Signage</span>
+          <h3>Neon Light</h3>
+          <p>Automotive-inspired logo and signage artwork.</p>
+        </div>
+      </article></div>
+</div></section>
+
+<section class="services" id="services"><div class="container">
+  <div class="section-label">Services</div><h2 class="section-title">What I Can Create</h2>
+  <p class="section-description">Creative services for businesses, brands, organizations and personal projects.</p>
+  <div class="services-grid">
+    <div class="service"><div class="service-number">01</div><h3>Graphic Design</h3><p>Posters, flyers, advertisements, layouts and promotional materials.</p></div>
+    <div class="service"><div class="service-number">02</div><h3>Social Media Design</h3><p>Social media posts, banners, promotional graphics and content kits.</p></div>
+    <div class="service"><div class="service-number">03</div><h3>Photo Editing</h3><p>Retouching, color correction, enhancement and creative manipulation.</p></div>
+    <div class="service"><div class="service-number">04</div><h3>Digital Arts</h3><p>Illustration, concept art, character design and visual development.</p></div>
+    <div class="service"><div class="service-number">05</div><h3>Branding</h3><p>Logo design, visual identity, brand materials and marketing assets.</p></div>
+    <div class="service"><div class="service-number">06</div><h3>Print Design</h3><p>Brochures, company profiles, calling cards, flyers and print layouts.</p></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="container">
+  <div class="section-label">Contact</div><h2 class="section-title">Let's bring your vision to life.</h2>
+  <p class="contact-description">Available for design projects, creative collaborations, freelance opportunities, and professional design work.</p>
+  <div class="contact-info">
+    <div class="contact-box"><small>Email</small>charlesmadronero@gmail.com</div>
+    <div class="contact-box"><small>Location</small>Makati City, Philippines</div>
+  </div>
+</div></section>
+
+<footer>© 2026 CCJ Creative. All Rights Reserved.</footer>
+</body>
+</html>
